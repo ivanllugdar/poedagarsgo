@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Condiciones de Pago | Poedagar SGO</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Estilos específicos -->
+    <link rel="stylesheet" href="/css/condiciones-de-pago.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+<script>
+fetch("/header.html")
+    .then(r => r.text())
+    .then(html => {
+        document.getElementById("header-container").innerHTML = html;
+        const header = document.querySelector("header.header");
+        if (header) document.body.style.paddingTop = header.offsetHeight + "px";
+    });
+</script>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="privacy-main">
+    <section class="privacy-container">
+
+        <header class="privacy-header">
+            <p class="privacy-kicker">Información sobre Pagos y Facturación</p>
+            <h1>Condiciones de Pago</h1>
+            <p class="privacy-intro">
+                En <span>Poedagar SGO</span>, trabajamos para brindarte un proceso de pago
+                claro, seguro y transparente. A continuación, detallamos las condiciones
+                aplicables a las operaciones realizadas en nuestro sitio web.
+            </p>
+        </header>
+
+        <!-- 1 -->
+        <section class="privacy-section">
+            <h2>1. Seguridad en los Pagos</h2>
+            <p>
+                El pago mediante tarjeta de crédito, débito o prepaga en Poedagar SGO se realiza
+                a través de entornos seguros. Todas las transacciones se procesan mediante
+                servidores de validación bancaria y utilizan el protocolo de encriptación
+                <strong>SSL (Secure Socket Layer)</strong>.
+            </p>
+            <p>
+                Poedagar SGO no almacena datos sensibles de tarjetas. El procesamiento de los
+                pagos se encuentra a cargo de <strong>Ualá Bis</strong> y de las entidades
+                emisoras correspondientes.
+            </p>
+        </section>
+
+        <!-- 2 -->
+        <section class="privacy-section">
+            <h2>2. Medios de Pago Disponibles</h2>
+            <p>
+                Las compras realizadas en <span>www.poedagarsgo.com.ar</span> se procesan a
+                través de Ualá Bis, permitiendo abonar mediante:
+            </p>
+            <ul>
+                <li>Tarjetas de crédito: Visa, Mastercard, American Express, NaranjaX y Cabal.</li>
+                <li>Tarjetas de débito y prepagas habilitadas por la plataforma.</li>
+            </ul>
+            <p>
+                La aceptación y aprobación de los pagos dependen exclusivamente del procesador
+                de pagos y de la entidad emisora de la tarjeta.
+            </p>
+        </section>
+
+        <!-- 3 -->
+        <section class="privacy-section">
+            <h2>3. Pagos en Cuotas</h2>
+            <p>
+                Según la tarjeta utilizada y las promociones vigentes, el usuario podrá abonar
+                su compra en:
+            </p>
+            <ul>
+                <li>1 cuota sin interés.</li>
+                <li>3 cuotas sin interés.</li>
+            </ul>
+            <p>
+                Las opciones de financiación se encuentran sujetas a disponibilidad, condiciones
+                del banco emisor y habilitación de la tarjeta al momento de la compra.
+            </p>
+        </section>
+
+        <!-- 4 -->
+        <section class="privacy-section">
+            <h2>4. Procesamiento del Pedido</h2>
+            <p>
+                Una vez que el pago haya sido debidamente acreditado, Poedagar SGO procesará el
+                pedido en un plazo estimado de <strong>24 a 48 horas hábiles</strong>.
+            </p>
+            <p>
+                La confirmación del pedido será enviada al correo electrónico informado durante
+                el proceso de compra.
+            </p>
+        </section>
+
+        <!-- 5 -->
+        <section class="privacy-section">
+            <h2>5. Pagos Rechazados o con Inconvenientes</h2>
+            <p>
+                Un pago puede no completarse por diversos motivos, entre ellos:
+            </p>
+            <ul>
+                <li>Datos incorrectos ingresados.</li>
+                <li>Falta de fondos o límites de la tarjeta.</li>
+                <li>Restricciones de seguridad del banco emisor.</li>
+                <li>Inhabilitación de la tarjeta para compras online.</li>
+            </ul>
+            <p>
+                Ante inconvenientes persistentes, el usuario deberá comunicarse con su entidad
+                bancaria para obtener mayor información.
+            </p>
+        </section>
+
+        <!-- 6 -->
+        <section class="privacy-section">
+            <h2>6. Pagos Debitadas y Pedidos Cancelados</h2>
+            <p>
+                Si el usuario recibe una notificación de cancelación del pedido por falta de
+                pago, pero el importe hubiera sido debitado, deberá:
+            </p>
+            <ul>
+                <li>Verificar sus movimientos bancarios.</li>
+                <li>Conservar el comprobante de pago.</li>
+                <li>Contactar al Centro de Atención al Cliente de Poedagar SGO.</li>
+            </ul>
+            <p>
+                Cada caso será evaluado de manera individual junto al procesador de pagos.
+            </p>
+        </section>
+
+        <!-- 7 -->
+        <section class="privacy-section">
+            <h2>7. Facturación</h2>
+            <p>
+                La factura correspondiente será emitida una vez que el pedido se encuentre
+                listo para su envío y será enviada al correo electrónico registrado.
+            </p>
+            <p>
+                En caso de no recibirla dentro de un plazo razonable, el usuario podrá
+                comunicarse con nuestro equipo de atención indicando el número de pedido.
+            </p>
+        </section>
+
+        <!-- FIRMA -->
+        <div class="privacy-signoff">
+            <p class="privacy-signoff-text">Atte. el equipo de</p>
+            <img src="https://firebasestorage.googleapis.com/v0/b/poedagarsgo-31c17.firebasestorage.app/o/assets%2Ficonos%2Fpoedagarsgo.png?alt=media&token=b0ce3419-10db-44d6-beef-81156c3f28e1"
+                 alt="Poedagar SGO"
+                 class="privacy-signoff-logo">
+        </div>
+
+    </section>
+</main>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+<script>
+fetch("/footer.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("footer-container").innerHTML = html);
+</script>
+
+<script src="/js/header.js"></script>
+<script src="/js/footer.js"></script>
+
+</body>
+</html>

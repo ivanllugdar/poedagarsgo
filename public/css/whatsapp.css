@@ -1,0 +1,30 @@
+/* -------------------------------------
+   BOTÓN WHATSAPP FLOTANTE
+-------------------------------------- */
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.4);
+    transition: transform 0.25s ease;
+    z-index: 9999;
+}
+
+.whatsapp-fixed:hover {
+    transform: scale(1.12);
+}
+
+.whatsapp-fixed img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}

@@ -1,0 +1,13 @@
+# Videos pesados
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+
+# Basura del sistema
+.DS_Store
+Thumbs.db
+
+# VS Code (opcional)
+.vscode/

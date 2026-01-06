@@ -1,0 +1,209 @@
+/* -------------------------------------
+   VARIABLES Y RESET PARA PRODUCTO
+-------------------------------------- */
+:root {
+    --primary-dark: #02211a;
+    --primary-medium: #033b2d;
+    --primary-light: #055944;
+    --accent: #d4af37;
+    --accent-soft: #e6c862;
+    --text-light: #ffffff;
+    --text-muted: #e0e0e0;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+body {
+    background: var(--primary-dark);
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* -------------------------------------
+   EFECTOS DE FONDO
+-------------------------------------- */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(5, 89, 68, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* -------------------------------------
+   SECCIÓN PRODUCTO DETALLE
+-------------------------------------- */
+.producto-detalle {
+    max-width: 1000px;
+    margin: 120px auto 80px auto;
+    padding: 0 20px;
+}
+
+.producto-contenedor {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.producto-imagen {
+    flex: 1;
+}
+
+.producto-imagen img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.producto-info {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.producto-titulo {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.producto-precio {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.producto-descripcion {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: var(--text-muted);
+}
+
+/* -------------------------------------
+   BOTONES PARA PRODUCTO
+-------------------------------------- */
+.btn {
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.hero-btn {
+    background: var(--white);
+    color: var(--primary-dark);
+    border: 2px solid var(--white);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(2, 33, 26, 0.1), 
+        transparent);
+    transition: left 0.6s ease;
+}
+
+.hero-btn:hover {
+    background: transparent;
+    color: var(--white);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.hero-btn:hover::before {
+    left: 100%;
+}
+
+/* -------------------------------------
+   FOOTER
+-------------------------------------- */
+footer {
+    margin-top: 40px;
+    background: #011611;
+    color: #b0bec5;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* -------------------------------------
+   RESPONSIVE DESIGN
+-------------------------------------- */
+@media (max-width: 900px) {
+    .producto-contenedor {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .producto-titulo {
+        font-size: 1.6rem;
+    }
+    
+    .producto-precio {
+        font-size: 1.5rem;
+    }
+    
+    .producto-info {
+        padding: 0;
+    }
+}
+
+/* -------------------------------------
+   SCROLLBAR
+-------------------------------------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #011611;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaaaaa;
+}

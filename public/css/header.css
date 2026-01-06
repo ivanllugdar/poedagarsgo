@@ -1,0 +1,365 @@
+/* -------------------------------------
+   VARIABLES Y RESET PARA EL HEADER
+-------------------------------------- */
+:root {
+  --primary-dark: #02211a;
+  --primary-medium: #033b2d;
+  --primary-light: #055944;
+  --accent: #d4af37;
+  --accent-soft: #e6c862;
+  --text-light: #ffffff;
+  --text-muted: #e0e0e0;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", comfortaa;
+}
+
+/* -------------------------------------
+   ESTILOS PRINCIPALES DEL HEADER
+-------------------------------------- */
+header.header {
+  width: 100%;
+  background: rgba(2, 33, 26, 0.92);
+  backdrop-filter: blur(15px);
+  color: var(--text-light);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  padding: 8px 0;
+}
+
+/* Línea dorada superior */
+header.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.6;
+}
+
+/* Línea dorada inferior */
+header.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.6;
+}
+
+/* -------------------------------------
+   CONTENEDOR DEL HEADER
+-------------------------------------- */
+.header-row {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  position: relative;
+}
+
+/* -------------------------------------
+   BOTÓN HAMBURGUESA (MOBILE)
+-------------------------------------- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* -------------------------------------
+   LOGO + MENÚ
+-------------------------------------- */
+.header-main-content {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+
+  /* Ocupa el espacio central sin empujar los íconos fuera */
+  flex: 1;
+  min-width: 0; /* importante en flex para evitar desbordes raros */
+}
+
+/* LOGO */
+.header-logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.header-logo img {
+  height: 85px;
+  display: block;
+}
+
+/* MENÚ */
+.main-menu {
+  display: flex;
+  align-items: center;
+
+  /* Que el menú use el espacio disponible pero pueda "encogerse" */
+  flex: 1;
+  min-width: 0;
+}
+
+.menu-links {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* equilibrado */
+  list-style: none;
+
+  gap: 26px;
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.menu-links a:hover,
+.menu-links a.activo {
+  color: var(--accent);
+}
+
+.menu-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.menu-links a:hover::after,
+.menu-links a.activo::after {
+  width: 100%;
+}
+
+/* -------------------------------------
+   ICONOS DERECHA
+-------------------------------------- */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  /* Asegura que los íconos siempre queden a la derecha */
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+/* El SVG usa currentColor, pero vos definís stroke directo */
+.icon-line {
+  stroke: var(--white);
+  transition: 0.2s ease;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 0;
+  text-decoration: none;
+}
+
+.icon-btn:hover .icon-line {
+  stroke: var(--accent);
+}
+
+/* Asegurar que los enlaces con clase icon-btn sean visibles */
+.header-icons a.icon-btn {
+  display: inline-flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.header-icons .icon-btn svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+/* -------------------------------------
+   OVERLAY PARA CERRAR MENÚ
+-------------------------------------- */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(2, 33, 26, 0.7);
+  backdrop-filter: blur(5px);
+  z-index: 9998;
+}
+
+.menu-overlay.active {
+  display: block;
+}
+
+/* -------------------------------------
+   RESPONSIVE
+-------------------------------------- */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header-logo img {
+    height: 60px;
+  }
+
+  /* Ocultamos menú en línea */
+  .main-menu {
+    display: none;
+  }
+
+  /* Menú lateral */
+  .main-menu.open {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 75%;
+    max-width: 300px;
+    height: 100vh;
+
+    background: rgba(2, 33, 26, 0.98);
+    backdrop-filter: blur(15px);
+
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 80px 30px 30px;
+
+    gap: 35px;
+    z-index: 9999;
+
+    animation: slideInLeft 0.3s ease forwards;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .main-menu.open .menu-links {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 18px;
+  }
+
+  .menu-links a {
+    font-size: 1.05rem;
+    color: var(--white);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+  }
+
+  .menu-links a:hover {
+    color: var(--accent-soft);
+    border-bottom-color: var(--accent-soft);
+  }
+
+  .menu-links a::after {
+    display: none;
+  }
+
+  .header-icons {
+    gap: 14px;
+  }
+
+  .header-icons .icon-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-row {
+    padding: 0 15px;
+  }
+
+  .header-logo img {
+    height: 50px;
+  }
+
+  .header-icons {
+    gap: 12px;
+  }
+}

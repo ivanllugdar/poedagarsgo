@@ -1,0 +1,161 @@
+/* -------------------------------------
+   RESET GENERAL & VARIABLES
+-------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+:root {
+    --primary-dark: #02211a;
+    --primary-medium: #033b2d;
+    --primary-light: #055944;
+    --accent: #d4af37;
+    --accent-soft: #e6c862;
+    --text-light: #ffffff;
+    --card-bg: rgba(2, 33, 26, 0.7);
+}
+
+body {
+    background: var(--primary-dark);
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+/* Fondo decorativo igual a Sobre Nosotros */
+body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image:
+        radial-gradient(circle at 30% 20%, rgba(212,175,55,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(5,89,68,0.05) 0%, transparent 50%);
+    z-index: -1;
+}
+
+/* -------------------------------------
+   CONTENEDOR GENERAL
+-------------------------------------- */
+.contacto-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 120px auto 80px auto;
+    text-align: center;
+}
+
+.contacto-title {
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+}
+
+.contacto-descripcion {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 50px;
+}
+
+/* -------------------------------------
+   FORMULARIO
+-------------------------------------- */
+.contacto-form {
+    background: var(--card-bg);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    backdrop-filter: blur(4px);
+}
+
+.form-grupo {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    font-size: 1rem;
+    color: var(--accent-soft);
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* Botón enviar */
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: none;
+    background: var(--accent);
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-enviar:hover {
+    background: var(--accent-soft);
+}
+
+/* Mensaje estado */
+.estado-form {
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+/* -------------------------------------
+   BOTÓN WHATSAPP FLOTANTE (ACTUALIZADO)
+-------------------------------------- */
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 75px;      /* AUMENTADO */
+    height: 75px;     /* AUMENTADO */
+    background: rgba(0,0,0,0.25); /* semitransparente muy suave */
+    backdrop-filter: blur(4px);   /* efecto glass leve */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.4);
+    transition: transform 0.25s ease;
+}
+
+.whatsapp-fixed:hover {
+    transform: scale(1.12);
+}
+
+.whatsapp-fixed img {
+    width: 58px;   /* ICONO MÁS GRANDE */
+    height: 58px;  /* ICONO MÁS GRANDE */
+    object-fit: contain;
+}
+
+
+/* -------------------------------------
+   FOOTER
+-------------------------------------- */
+footer {
+    margin-top: 60px;
+    background: #011611;
+    color: #b0bec5;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}

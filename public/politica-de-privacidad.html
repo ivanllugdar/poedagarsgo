@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Política de Privacidad | Poedagar SGO</title>
+    
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Estilos generales del sitio -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <!-- Añade aquí otros CSS generales si existen -->
+    
+    <!-- Estilos específicos de Política de Privacidad -->
+    <link rel="stylesheet" href="/css/politica-privacidad.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-container"></div>
+    
+    <script>
+    // Carga del header - RUTA ABSOLUTA (como en index.html)
+    fetch("/header.html")
+        .then(r => r.text())
+        .then(html => {
+            document.getElementById("header-container").innerHTML = html;
+            
+            // Ajustar padding-top del body según altura del header
+            const header = document.querySelector("header.header");
+            if (header) {
+                const h = header.offsetHeight;
+                document.body.style.paddingTop = h + "px";
+            }
+        })
+        .catch(err => console.error("Error cargando el header:", err));
+    </script>
+    
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="privacy-main">
+        <section class="privacy-container">
+            <header class="privacy-header">
+                <p class="privacy-kicker">Información y Protección de Datos</p>
+                <h1>Política de Privacidad</h1>
+                <p class="privacy-intro">
+                    En <span>Poedagar SGO</span>, valoramos tu privacidad y nos comprometemos a proteger tus datos personales.
+                    En este documento te explicamos cómo recopilamos, utilizamos y resguardamos tu información cuando navegás
+                    por nuestro sitio web o realizás una compra.
+                </p>
+            </header>
+            
+            <!-- 1. Información que recopilamos -->
+            <section class="privacy-section">
+                <h2>1. Información que recopilamos</h2>
+                
+                <h3>1.1 Información proporcionada por el usuario</h3>
+                <p>
+                    Recopilamos los datos personales que nos brindás de manera voluntaria cuando:
+                </p>
+                <ul>
+                    <li>Realizás una compra en nuestro sitio.</li>
+                    <li>Completás formularios de contacto o de consulta.</li>
+                    <li>Te comunicás con nosotros por WhatsApp, correo electrónico u otros canales.</li>
+                    <li>Te suscribís para recibir novedades o promociones.</li>
+                </ul>
+                <p>Esta información puede incluir, entre otros datos:</p>
+                <ul>
+                    <li>Nombre y apellido.</li>
+                    <li>Dirección de correo electrónico.</li>
+                    <li>Número de teléfono.</li>
+                    <li>Dirección postal.</li>
+                    <li>DNI y datos de facturación.</li>
+                    <li>Cualquier otro dato que decidas compartir voluntariamente.</li>
+                </ul>
+                
+                <h3>1.2 Información recopilada automáticamente</h3>
+                <p>
+                    Cuando navegás por nuestro sitio, de forma automática podemos recopilar cierta información técnica
+                    sobre tu dispositivo y tu interacción con la web, como por ejemplo:
+                </p>
+                <ul>
+                    <li>Dirección IP.</li>
+                    <li>Tipo y versión de navegador.</li>
+                    <li>Páginas visitadas y tiempo de permanencia.</li>
+                    <li>Datos técnicos del dispositivo utilizado.</li>
+                </ul>
+                <p>
+                    Esta información se obtiene mediante cookies y tecnologías similares y se utiliza únicamente con fines
+                    estadísticos y para mejorar la experiencia de navegación.
+                </p>
+            </section>
+            
+            <!-- 2. Uso de la información -->
+            <section class="privacy-section">
+                <h2>2. Uso de la información</h2>
+                
+                <h3>2.1 Proveer y mejorar nuestros servicios</h3>
+                <p>Utilizamos tu información personal para:</p>
+                <ul>
+                    <li>Procesar y gestionar tus compras.</li>
+                    <li>Emitir facturación y comprobantes de pago.</li>
+                    <li>Coordinar envíos y entregas.</li>
+                    <li>Responder consultas y brindar soporte.</li>
+                    <li>Mejorar la funcionalidad y el contenido de nuestro sitio web.</li>
+                </ul>
+                
+                <h3>2.2 Comunicaciones</h3>
+                <p>
+                    Podemos utilizar tus datos de contacto para enviarte:
+                </p>
+                <ul>
+                    <li>Confirmaciones y actualizaciones de tus pedidos.</li>
+                    <li>Información importante sobre el servicio.</li>
+                    <li>Promociones, novedades y ofertas especiales de Poedagar SGO (cuando hayas dado tu consentimiento o exista una relación comercial previa).</li>
+                </ul>
+                
+                <h3>2.3 Cumplimiento legal</h3>
+                <p>
+                    Podremos conservar y/o revelar tu información personal cuando sea necesario para:
+                </p>
+                <ul>
+                    <li>Cumplir con obligaciones legales o requerimientos de autoridades competentes.</li>
+                    <li>Responder a procesos legales, reclamos o solicitudes válidas.</li>
+                    <li>Proteger nuestros derechos, propiedad y seguridad, así como la de nuestros clientes.</li>
+                </ul>
+            </section>
+            
+            <!-- 3. Compartir información con terceros -->
+            <section class="privacy-section">
+                <h2>3. Compartir información con terceros</h2>
+                <p>
+                    No vendemos ni alquilamos tu información personal a terceros para sus propios fines comerciales.
+                </p>
+                <p>
+                    Podemos compartir ciertos datos con proveedores de servicios externos que nos ayudan a operar y
+                    mejorar nuestro sitio y nuestra operatoria, tales como:
+                </p>
+                <ul>
+                    <li>Plataformas de pago en línea (por ejemplo, Ualá Bis).</li>
+                    <li>Servicios de logística y envíos.</li>
+                    <li>Proveedores de hosting y mantenimiento del sitio web.</li>
+                    <li>Sistemas de facturación y gestión administrativa.</li>
+                </ul>
+                <p>
+                    Estos terceros sólo tienen acceso a la información necesaria para realizar sus funciones y están
+                    obligados a proteger tus datos y a utilizarlos exclusivamente conforme a nuestras instrucciones y a
+                    la legislación vigente.
+                </p>
+            </section>
+            
+            <!-- 4. Seguridad de la información -->
+            <section class="privacy-section">
+                <h2>4. Seguridad de la información</h2>
+                <p>
+                    Implementamos medidas de seguridad técnicas y organizativas razonables para proteger tu información
+                    personal contra el acceso no autorizado, la alteración, divulgación o destrucción.
+                </p>
+                <p>
+                    Sin embargo, ningún sistema es completamente infalible. Trabajamos continuamente para reforzar la
+                    seguridad de nuestros sistemas y procesos.
+                </p>
+            </section>
+            
+            <!-- 5. Tus derechos -->
+            <section class="privacy-section">
+                <h2>5. Tus derechos</h2>
+                
+                <h3>5.1 Acceso, corrección y actualización</h3>
+                <p>
+                    Tenés derecho a solicitar información sobre los datos personales que almacenamos sobre vos, así como
+                    a pedir la corrección, actualización o rectificación de datos inexactos o incompletos.
+                </p>
+                
+                <h3>5.2 Eliminación de datos</h3>
+                <p>
+                    Podés solicitar la supresión de tus datos personales cuando consideres que no son necesarios para los
+                    fines para los cuales fueron recolectados, o cuando hayas retirado tu consentimiento, salvo que
+                    exista una obligación legal de conservarlos.
+                </p>
+                
+                <h3>5.3 Marco legal – Ley N.º 25.326</h3>
+                <p class="legal-quote">
+                    "El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos de
+                    forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al
+                    efecto, conforme lo establecido en el artículo 14, inciso 3 de la Ley Nº 25.326."
+                </p>
+                <p class="legal-quote">
+                    "La Dirección Nacional de Protección de Datos Personales, órgano de control de la Ley Nº 25.326, tiene
+                    la atribución de atender las denuncias y reclamos que se interpongan con relación al incumplimiento de
+                    las normas sobre protección de datos personales."
+                </p>
+                <p>
+                    Si no estás de acuerdo con los términos de esta Política de Privacidad, nuestros Términos y
+                    Condiciones y/o nuestra Política de Cookies, te solicitamos que no utilices nuestro sitio web ni
+                    brindes tus datos personales.
+                </p>
+            </section>
+            
+            <!-- 6. Cookies -->
+            <section class="privacy-section">
+                <h2>6. Cookies y tecnologías similares</h2>
+                <p>
+                    Utilizamos cookies y tecnologías similares para mejorar tu experiencia de navegación, recordar
+                    preferencias, analizar el tráfico del sitio y ofrecer contenido más relevante.
+                </p>
+                <p>
+                    Podés configurar tu navegador para rechazar cookies o para alertarte cuando se envíen. Tené en cuenta
+                    que, si desactivás las cookies, algunas funciones del sitio pueden no funcionar correctamente.
+                </p>
+            </section>
+            
+            <!-- 7. Compras como invitado -->
+            <section class="privacy-section">
+                <h2>7. Compras como invitado</h2>
+                <p>
+                    Podés realizar compras en nuestro sitio sin necesidad de registrarte. En ese caso, sólo te
+                    solicitaremos los datos indispensables para:
+                </p>
+                <ul>
+                    <li>Procesar el pago.</li>
+                    <li>Emitir la factura correspondiente.</li>
+                    <li>Realizar el envío de tu pedido.</li>
+                    <li>Comunicarnos en caso de ser necesario.</li>
+                </ul>
+                <p>
+                    Si utilizás datos ya registrados previamente, podremos emplear la información asociada a tu DNI para
+                    asegurar la correcta identificación y facturación. Todos los datos se tratan conforme a esta Política
+                    de Privacidad y a la Ley N.º 25.326 de Protección de Datos Personales.
+                </p>
+            </section>
+            
+            <!-- 8. Cambios en la política -->
+            <section class="privacy-section">
+                <h2>8. Cambios en esta Política de Privacidad</h2>
+                <p>
+                    Poedagar SGO se reserva el derecho de modificar o actualizar esta Política de Privacidad en cualquier
+                    momento. Cualquier cambio será publicado en esta misma sección de nuestro sitio web y, si corresponde,
+                    podrá ser comunicado mediante avisos destacados.
+                </p>
+                <p>
+                    Te recomendamos revisar periódicamente esta página para estar informado sobre cómo protegemos tu
+                    información.
+                </p>
+            </section>
+            
+            <!-- 9. Contacto -->
+            <section class="privacy-section">
+                <h2>9. Contacto</h2>
+                <p>
+                    Si tenés dudas, consultas o deseás ejercer tus derechos de acceso, rectificación, actualización o
+                    supresión de datos, podés contactarnos a través de los siguientes medios:
+                </p>
+                <ul>
+                    <li><strong>Poedagar SGO – Nuvra Group</strong></li>
+                    <li><strong>Correo electrónico:</strong> <a href="mailto:poedagarsgo@gmail.com">poedagarsgo@gmail.com</a></li>
+                    <li><strong>WhatsApp:</strong> <a href="https://wa.me/5493853053653" target="_blank" rel="noopener">+54 9 3853 053653</a></li>
+                    <li><strong>Sitio web:</strong> <a href="https://www.poedagarsgo.com.ar" target="_blank" rel="noopener">www.poedagarsgo.com.ar</a></li>
+                    <li><strong>Ubicación:</strong> Santiago del Estero, Argentina.</li>
+                </ul>
+            </section>
+            
+            <!-- Firma final -->
+            <div class="privacy-signoff">
+                <p class="privacy-signoff-text">Atte. el equipo de</p>
+                <img src="https://firebasestorage.googleapis.com/v0/b/poedagarsgo-31c17.firebasestorage.app/o/assets%2Ficonos%2Fpoedagarsgo.png?alt=media&token=b0ce3419-10db-44d6-beef-81156c3f28e1"
+                     alt="Poedagar SGO"
+                     class="privacy-signoff-logo">
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
+    <script>
+    // Carga del footer - RUTA ABSOLUTA
+    fetch("/footer.html")
+        .then(r => r.text())
+        .then(html => {
+            document.getElementById("footer-container").innerHTML = html;
+        })
+        .catch(err => console.error("Error cargando el footer:", err));
+    </script>
+    
+    <!-- JS del Header -->
+    <script src="/js/header.js"></script>
+
+    <!-- JS del Footer -->
+    <script src="/js/footer.js"></script>
+</body>
+</html>

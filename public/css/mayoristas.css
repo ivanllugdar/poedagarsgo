@@ -1,0 +1,292 @@
+/* -------------------------------------
+   RESET GLOBAL (UNIFICA TODO EL SITIO)
+-------------------------------------- */
+
+* {
+    font-family: "Comfortaa", sans-serif;
+}
+
+body {
+    background: var(--primary-dark);
+    color: var(--text-light);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* Fondo radial: mismo que el resto del sitio */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(212,175,55,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(5,89,68,0.05) 0%, transparent 50%);
+    pointer-events: none;
+
+    /* Igual que SOBRE NOSOTROS */
+    z-index: -1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #011611; }
+::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #aaa; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------------------
+   CONTENEDOR
+-------------------------------------- */
+
+.mayoristas-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 70px auto 100px auto;
+}
+
+/* -------------------------------------
+   TITULOS
+-------------------------------------- */
+
+.mayoristas-title {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+.mayoristas-subtitle {
+    text-align: center;
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    opacity: 0.8;
+}
+
+.mayoristas-separator {
+    width: 80%;
+    max-width: 800px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    margin: 50px auto;
+    opacity: 0.6;
+}
+
+/* -------------------------------------
+   BENEFICIOS 2×2
+-------------------------------------- */
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 35px;
+}
+
+@media (max-width: 900px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.benefit-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.08);
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.35s ease;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+.benefit-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(212,175,55,0.45);
+    border-color: rgba(212,175,55,0.5);
+}
+
+.benefit-card h3 {
+    color: var(--accent);
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+/* -------------------------------------
+   SECCIONES CENTRADAS
+-------------------------------------- */
+
+.mayoristas-vision {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.9s ease;
+}
+
+.mayoristas-vision.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* -------------------------------------
+   IMÁGENES FIJAS 2×2
+-------------------------------------- */
+
+.imagenes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.img-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+    display: flex;
+    justify-content: center;
+}
+
+.img-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img-item img {
+    width: 100%;
+    max-width: 420px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 0 35px rgba(212,175,55,0.25));
+    border-radius: 14px;
+
+    -webkit-mask-image: radial-gradient(circle, black 35%, transparent 100%);
+    mask-image: radial-gradient(circle, black 35%, transparent 100%);
+
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.img-item img:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 25px rgba(212,175,55,0.45));
+}
+
+@media (max-width: 900px) {
+    .imagenes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -------------------------------------
+   BLOQUE "¿Qué obtenés?"
+-------------------------------------- */
+
+.titulo-extra {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 35px;
+}
+
+.extra-box {
+    background: rgba(2, 33, 26, 0.7);
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 750px;
+    margin: 0 auto 60px auto;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 35px rgba(212,175,55,0.15);
+}
+
+.extra-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 2.1rem;
+    font-size: 1.2rem;
+}
+
+.extra-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 10px;
+}
+
+.extra-list li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 9px;
+    box-shadow: 0 0 10px rgba(212,175,55,0.45);
+}
+
+/* -------------------------------------
+   BLOQUES FINALES
+-------------------------------------- */
+
+.final-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 35px;
+}
+
+@media (max-width: 900px) {
+    .final-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.final-bloque h2 {
+    color: var(--accent);
+}
+
+/* -------------------------------------
+   BOTÓN
+-------------------------------------- */
+
+.btn-mayoristas {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 14px 40px;
+    border-radius: 30px;
+    background: #c49b2d;
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-mayoristas:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(196,155,45,0.55);
+}
+
+@media (max-width: 900px) {
+    .btn-mayoristas {
+        width: 80%;
+    }
+}

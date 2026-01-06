@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Términos y Condiciones | Poedagar SGO</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Estilos específicos -->
+    <link rel="stylesheet" href="/css/terminos-y-condiciones.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+<script>
+fetch("/header.html")
+    .then(r => r.text())
+    .then(html => {
+        document.getElementById("header-container").innerHTML = html;
+        const header = document.querySelector("header.header");
+        if (header) document.body.style.paddingTop = header.offsetHeight + "px";
+    });
+</script>
+
+<!-- CONTENIDO -->
+<main class="privacy-main">
+    <section class="privacy-container">
+
+        <header class="privacy-header">
+            <p class="privacy-kicker">Condiciones Generales de Uso</p>
+            <h1>Términos y Condiciones</h1>
+            <p class="privacy-intro">
+                Las presentes disposiciones regulan el acceso y uso del sitio web
+                <span>www.poedagarsgo.com.ar</span>, propiedad de <span>Poedagar SGO</span>.
+                Al navegar o realizar compras en este sitio, el usuario acepta expresamente
+                estos Términos y Condiciones.
+            </p>
+        </header>
+
+        <!-- 1 -->
+        <section class="privacy-section">
+            <h2>1. Aceptación de los Términos</h2>
+            <p>
+                El usuario que accede al sitio poedagarsgo.com.ar declara conocer y aceptar
+                los presentes Términos y Condiciones. En caso de no estar de acuerdo con los
+                mismos, deberá abstenerse de continuar utilizando el sitio.
+            </p>
+            <p>
+                Estos Términos y Condiciones estarán vigentes mientras se encuentren publicados
+                en el sitio, pudiendo ser modificados sin previo aviso. El uso continuado del
+                sitio implica la aceptación de las modificaciones introducidas.
+            </p>
+        </section>
+
+        <!-- 2 -->
+        <section class="privacy-section">
+            <h2>2. Capacidad Legal</h2>
+            <p>
+                Podrán operar en el sitio únicamente personas que tengan capacidad legal para
+                contratar conforme al Código Civil y Comercial de la Nación y demás normas
+                aplicables. No podrán utilizar el sitio quienes carezcan de dicha capacidad.
+            </p>
+        </section>
+
+        <!-- 3 -->
+        <section class="privacy-section">
+            <h2>3. Uso del Sitio</h2>
+            <p>
+                Poedagar SGO pone a disposición del usuario una plataforma virtual para la
+                comercialización de productos de relojería y accesorios. La información
+                publicada tiene carácter general y no constituye asesoramiento de ningún tipo.
+            </p>
+            <p>
+                El sitio puede contener enlaces a páginas de terceros. Poedagar SGO no se
+                responsabiliza por los contenidos, políticas o prácticas de dichos sitios.
+            </p>
+        </section>
+
+        <!-- 4 -->
+        <section class="privacy-section">
+            <h2>4. Compra de Productos</h2>
+            <p>
+                Para realizar compras, el usuario deberá registrarse y proporcionar información
+                veraz, completa y actualizada. El usuario es responsable de la confidencialidad
+                de sus credenciales de acceso.
+            </p>
+            <p>
+                La confirmación de una compra constituye una operación de compraventa, quedando
+                sujeta a las condiciones legales vigentes.
+            </p>
+        </section>
+
+        <!-- 5 -->
+        <section class="privacy-section">
+            <h2>5. Stock y Disponibilidad</h2>
+            <p>
+                El usuario reconoce que los productos están sujetos a disponibilidad de stock.
+                Debido a la dinámica del sitio, una compra podría no concretarse si el producto
+                no se encontrara disponible al momento de la confirmación.
+            </p>
+            <ul>
+                <li>Falta de stock.</li>
+                <li>Rechazo del pago por la entidad emisora.</li>
+                <li>Falta de aprobación crediticia.</li>
+            </ul>
+            <p>
+                En caso de no confirmarse la compra, el usuario será notificado por correo
+                electrónico.
+            </p>
+        </section>
+
+        <!-- 6 -->
+        <section class="privacy-section">
+            <h2>6. Reembolsos por Falta de Stock</h2>
+            <p>
+                Si una compra no pudiera concretarse por falta de stock, Poedagar SGO procederá
+                al reembolso del importe correspondiente al producto adquirido.
+            </p>
+        </section>
+
+        <!-- 7 -->
+        <section class="privacy-section">
+            <h2>7. Reseñas de Productos</h2>
+            <p>
+                Los usuarios registrados podrán escribir reseñas sobre los productos adquiridos.
+                Cada cliente podrá realizar una única reseña por producto.
+            </p>
+            <ul>
+                <li>Las reseñas deberán referirse exclusivamente al producto.</li>
+                <li>No se admitirán comentarios ofensivos o ajenos al producto.</li>
+                <li>Todas las reseñas serán revisadas antes de su publicación.</li>
+            </ul>
+        </section>
+
+        <!-- 8 -->
+        <section class="privacy-section">
+            <h2>8. Contacto</h2>
+            <ul>
+                <li><strong>Poedagar SGO – Nuvra Group</strong></li>
+                <li><strong>Email:</strong> <a href="mailto:poedagarsgo@gmail.com">poedagarsgo@gmail.com</a></li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/5493853053653" target="_blank">+54 9 3853 053653</a></li>
+                <li><strong>Sitio web:</strong> <a href="https://www.poedagarsgo.com.ar" target="_blank">www.poedagarsgo.com.ar</a></li>
+            </ul>
+        </section>
+
+        <!-- FIRMA -->
+        <div class="privacy-signoff">
+            <p class="privacy-signoff-text">Atte. el equipo de</p>
+            <img src="https://firebasestorage.googleapis.com/v0/b/poedagarsgo-31c17.firebasestorage.app/o/assets%2Ficonos%2Fpoedagarsgo.png?alt=media&token=b0ce3419-10db-44d6-beef-81156c3f28e1" alt="Poedagar SGO" class="privacy-signoff-logo">
+        </div>
+
+    </section>
+</main>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+<script>
+fetch("/footer.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("footer-container").innerHTML = html);
+</script>
+
+<script src="/js/header.js"></script>
+<script src="/js/footer.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda | Poedagar SGO</title>
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/tienda.css">
+    <link rel="stylesheet" href="/css/whatsapp.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+
+<!-- BARRA PROMO DESLIZANTE (debajo del header) -->
+<div class="promo-marquee" aria-label="Promociones">
+    <div class="promo-inner">
+        <div class="promo-track">
+            <span>3 cuotas sin interés</span>
+            <span class="dot">•</span>
+            <span>Envío gratis en compras superiores a $100.000</span>
+            <span class="dot">•</span>
+            <span>3 cuotas sin interés</span>
+            <span class="dot">•</span>
+            <span>Envío gratis en compras superiores a $100.000</span>
+            <span class="dot">•</span>
+            <span>3 cuotas sin interés</span>
+            <span class="dot">•</span>
+            <span>Envío gratis en compras superiores a $100.000</span>
+            <span class="dot">•</span>
+        </div>
+
+        <!-- Duplicado para loop infinito perfecto -->
+        <div class="promo-track" aria-hidden="true">
+            <span>3 cuotas sin interés</span>
+            <span class="dot">•</span>
+            <span>Envío gratis en compras superiores a $100.000</span>
+            <span class="dot">•</span>
+            <span>3 cuotas sin interés</span>
+            <span class="dot">•</span>
+            <span>Envío gratis en compras superiores a $100.000</span>
+            <span class="dot">•</span>
+            <span>3 cuotas sin interés</span>
+            <span class="dot">•</span>
+            <span>Envío gratis en compras superiores a $100.000</span>
+        </div>
+    </div>
+</div>
+
+<!-- HERO TIENDA (imagen de punta a punta) -->
+<section class="tienda-hero">
+
+    <!-- ESPACIO HERO (imagen / video) -->
+    <div class="hero-media" role="img" aria-label="Imagen destacada de la tienda">
+        <div class="hero-media-overlay"></div>
+
+        <!-- TÍTULO + SUBTÍTULO CENTRADOS DENTRO DEL HERO -->
+        <div class="hero-media-content">
+            <h1 class="tienda-titulo">Tienda Online</h1>
+            <p class="tienda-subtitulo">Elegí tu modelo ideal y eleva tu estilo.</p>
+        </div>
+    </div>
+
+    <!-- SEPARADOR -->
+    <div class="hero-separador-wrap">
+        <div class="hero-separador"></div>
+    </div>
+
+    <!-- BENEFICIOS (sin cuadros, centrado, más chico) -->
+    <div class="beneficios-wrap">
+        <div class="beneficios-bar" aria-label="Beneficios de compra">
+            <div class="beneficio-item">
+                <span class="beneficio-icon">🚚</span>
+                <span class="beneficio-text">Envíos a todo el país</span>
+            </div>
+            <div class="beneficio-item">
+                <span class="beneficio-icon">🧾</span>
+                <span class="beneficio-text">Compra simple y directa</span>
+            </div>
+            <div class="beneficio-item">
+                <span class="beneficio-icon">💬</span>
+                <span class="beneficio-text">Atención personalizada</span>
+            </div>
+        </div>
+
+        <div class="hero-separador"></div>
+    </div>
+
+</section>
+
+<!-- TIENDA / CATÁLOGO -->
+<div class="tienda-layout">
+
+    <!-- FILTROS LATERALES - DISEÑO PROFESIONAL -->
+    <aside class="filtros-panel">
+        <div class="filtros-header">
+            <h2>Filtrar Productos</h2>
+            <button class="btn-cerrar-filtros" id="cerrar-filtros" aria-label="Cerrar filtros">×</button>
+        </div>
+
+        <div class="filtro-grupo">
+            <label for="filtro-marca" class="filtro-label">Marca</label>
+            <div class="select-wrapper">
+                <select id="filtro-marca" class="select-elegante">
+                    <option value="todas">Todas las marcas</option>
+                    <option value="poedagar">Poedagar</option>
+                    <option value="northedge">North Edge</option>
+                </select>
+                <span class="select-arrow">▼</span>
+            </div>
+        </div>
+
+        <div class="filtro-grupo">
+            <label for="filtro-modelo" class="filtro-label">Modelo</label>
+            <div class="input-wrapper">
+                <input type="text" id="filtro-modelo" placeholder="Ej: 930, Mars, 777..." class="input-elegante">
+                <span class="input-icon">🔍</span>
+            </div>
+        </div>
+
+        <div class="filtro-grupo">
+            <label for="filtro-color" class="filtro-label">Color</label>
+            <div class="input-wrapper">
+                <input type="text" id="filtro-color" placeholder="Negro, plata, azul..." class="input-elegante">
+                <span class="input-icon">🎨</span>
+            </div>
+        </div>
+
+        <div class="filtro-grupo">
+            <label for="filtro-precio" class="filtro-label">Rango de Precio</label>
+            <div class="precio-range">
+                <div class="precio-values">
+                    <span id="precio-min">$0</span>
+                    <span id="precio-max">$500.000</span>
+                </div>
+                <input type="range" id="filtro-precio" min="0" max="500000" value="500000" class="range-slider">
+            </div>
+        </div>
+
+        <div class="filtros-actions">
+            <button id="btn-aplicar" class="btn-aplicar">Aplicar Filtros</button>
+            <button id="btn-limpiar" class="btn-limpiar">Limpiar Todo</button>
+        </div>
+
+        <div class="filtros-stats">
+            <p id="productos-count">Mostrando 12 productos</p>
+        </div>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="tienda-content">
+        <!-- ENCABEZADO CATÁLOGO -->
+        <div class="catalogo-header">
+            <div class="catalogo-info">
+                <h1 class="catalogo-titulo">Catálogo de Relojes</h1>
+                <p class="catalogo-descripcion">Selección exclusiva de relojes de precisión</p>
+            </div>
+            
+            <div class="catalogo-controls">
+                <div class="view-toggle">
+                    <button class="view-btn active" data-view="grid" aria-label="Vista en cuadrícula">
+                        <span>◼◼</span>
+                    </button>
+                    <button class="view-btn" data-view="list" aria-label="Vista en lista">
+                        <span>≡</span>
+                    </button>
+                </div>
+                
+                <div class="sort-wrapper">
+                    <select id="ordenar-por" class="sort-select">
+                        <option value="relevantes">Más relevantes</option>
+                        <option value="precio-asc">Precio: menor a mayor</option>
+                        <option value="precio-desc">Precio: mayor a menor</option>
+                        <option value="nuevos">Más nuevos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTÓN MOSTRAR FILTROS (solo móvil) -->
+        <button class="btn-filtros-mobile" id="abrir-filtros">
+            <span>⚙️</span>
+            <span>Filtrar</span>
+        </button>
+
+        <!-- GRID DE PRODUCTOS -->
+        <section class="productos-container" id="productos-container">
+            <!-- Los productos se cargarán aquí dinámicamente -->
+        </section>
+
+        <!-- PAGINACIÓN -->
+        <div class="paginacion">
+            <button class="pag-btn prev" disabled>‹ Anterior</button>
+            <div class="pag-numbers">
+                <button class="pag-number active">1</button>
+                <button class="pag-number">2</button>
+                <button class="pag-number">3</button>
+                <span class="pag-dots">...</span>
+                <button class="pag-number">8</button>
+            </div>
+            <button class="pag-btn next">Siguiente ›</button>
+        </div>
+    </main>
+</div>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+
+<!-- JS -->
+<script src="/js/header.js"></script>
+<script src="/js/footer.js"></script>
+<script src="/js/tienda.js"></script>
+<script src="/js/whatsapp.js"></script>
+
+</body>
+</html>

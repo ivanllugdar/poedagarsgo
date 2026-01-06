@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cambios y Devoluciones | Poedagar SGO</title>
+
+    <!-- Fuente -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Estilos específicos -->
+    <link rel="stylesheet" href="/css/cambios-y-devoluciones.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header-container"></div>
+<script>
+fetch("/header.html")
+    .then(r => r.text())
+    .then(html => {
+        document.getElementById("header-container").innerHTML = html;
+        const header = document.querySelector("header.header");
+        if (header) document.body.style.paddingTop = header.offsetHeight + "px";
+    });
+</script>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="privacy-main">
+    <section class="privacy-container">
+
+        <header class="privacy-header">
+            <p class="privacy-kicker">Información sobre Cambios, Devoluciones y Garantía</p>
+            <h1>Cambios y Devoluciones</h1>
+            <p class="privacy-intro">
+                En <span>Poedagar SGO</span> buscamos que tu experiencia de compra sea clara y
+                transparente. A continuación, detallamos las condiciones aplicables a los
+                cambios, devoluciones y garantías de los productos adquiridos en nuestro sitio.
+            </p>
+        </header>
+
+        <!-- 1 -->
+        <section class="privacy-section">
+            <h2>1. Cambios de Producto</h2>
+            <p>
+                El cliente podrá solicitar el cambio de un producto por otro disponible en el
+                sitio, siempre que el artículo seleccionado se encuentre en stock al momento
+                de la solicitud.
+            </p>
+            <p>
+                Si el cambio se realiza por el mismo modelo, el precio no se modificará. En
+                caso de optar por otro modelo, color o producto distinto, cualquier diferencia
+                de precio deberá ser abonada o será reintegrada, según corresponda.
+            </p>
+            <p>
+                El valor de referencia será el que figure en la factura original de compra,
+                excluyendo el costo del envío.
+            </p>
+        </section>
+
+        <!-- 2 -->
+        <section class="privacy-section">
+            <h2>2. Condiciones del Producto</h2>
+            <p>
+                Para que un cambio o devolución pueda ser gestionado, el producto deberá
+                encontrarse en las mismas condiciones en las que fue entregado:
+            </p>
+            <ul>
+                <li>Sin uso.</li>
+                <li>En perfectas condiciones.</li>
+                <li>Con su packaging original.</li>
+                <li>Con etiquetas y accesorios completos.</li>
+            </ul>
+            <p>
+                Será obligatorio presentar la factura de compra o comprobante digital.
+            </p>
+        </section>
+
+        <!-- 3 -->
+        <section class="privacy-section">
+            <h2>3. Plazos para Cambios y Garantía</h2>
+            <p>
+                El cliente contará con un plazo de <strong>30 (treinta) días corridos</strong>
+                desde la recepción del producto para solicitar un cambio voluntario.
+            </p>
+            <p>
+                En caso de tratarse de un producto con falla o defecto, el reclamo podrá
+                realizarse dentro de los <strong>90 (noventa) días corridos</strong> desde la
+                recepción del producto, conforme a la garantía comercial ofrecida por
+                Poedagar SGO.
+            </p>
+        </section>
+
+        <!-- 4 -->
+        <section class="privacy-section">
+            <h2>4. Costos Asociados a Cambios</h2>
+            <p>
+                El primer cambio podrá realizarse sin costo, sujeto a las condiciones
+                operativas vigentes.
+            </p>
+            <p>
+                A partir del segundo cambio, los costos de envío y retiro podrán estar a cargo
+                del cliente, según el domicilio y el operador logístico.
+            </p>
+            <p>
+                Si el cambio se debe a un error en el producto enviado o a una falla cubierta
+                por garantía, no se aplicará ningún costo adicional.
+            </p>
+        </section>
+
+        <!-- 5 -->
+        <section class="privacy-section">
+            <h2>5. Derecho de Arrepentimiento</h2>
+            <p>
+                De acuerdo con la Ley de Defensa del Consumidor (Ley 24.240), el cliente tiene
+                derecho a arrepentirse de la compra dentro de los <strong>10 (diez) días
+                corridos</strong> desde la recepción del producto.
+            </p>
+            <p>
+                En este caso, el producto deberá ser devuelto en las mismas condiciones en las
+                que fue recibido y el reintegro se realizará por el mismo medio de pago
+                utilizado en la compra.
+            </p>
+        </section>
+
+        <!-- 6 -->
+        <section class="privacy-section">
+            <h2>6. Productos Excluidos</h2>
+            <p>
+                Por razones de higiene, seguridad o personalización, no se aceptan cambios ni
+                devoluciones de los siguientes productos:
+            </p>
+            <ul>
+                <li>Productos personalizados.</li>
+                <li>Ropa interior.</li>
+                <li>Accesorios de uso personal, cuando corresponda.</li>
+            </ul>
+        </section>
+
+        <!-- 7 -->
+        <section class="privacy-section">
+            <h2>7. Productos Incorrectos o Pedidos Incompletos</h2>
+            <p>
+                Si el cliente recibe un producto diferente al solicitado o un pedido
+                incompleto, deberá comunicarse con el Centro de Atención al Cliente de
+                Poedagar SGO dentro de un plazo razonable desde la recepción.
+            </p>
+            <p>
+                Podrá solicitarse el número de pedido, el detalle del producto afectado y
+                evidencia fotográfica para la evaluación del caso.
+            </p>
+        </section>
+
+        <!-- 8 -->
+        <section class="privacy-section">
+            <h2>8. Reintegros de Dinero</h2>
+            <p>
+                Los reintegros se realizarán exclusivamente por el mismo medio de pago
+                utilizado en la compra.
+            </p>
+            <p>
+                Los plazos de acreditación dependen de la entidad emisora de la tarjeta y son
+                ajenos a Poedagar SGO.
+            </p>
+        </section>
+
+        <!-- FIRMA -->
+        <div class="privacy-signoff">
+            <p class="privacy-signoff-text">Atte. el equipo de</p>
+            <img src="https://firebasestorage.googleapis.com/v0/b/poedagarsgo-31c17.firebasestorage.app/o/assets%2Ficonos%2Fpoedagarsgo.png?alt=media&token=b0ce3419-10db-44d6-beef-81156c3f28e1"
+                 alt="Poedagar SGO"
+                 class="privacy-signoff-logo">
+        </div>
+
+    </section>
+</main>
+
+<!-- FOOTER -->
+<div id="footer-container"></div>
+<script>
+fetch("/footer.html")
+    .then(r => r.text())
+    .then(html => document.getElementById("footer-container").innerHTML = html);
+</script>
+
+<script src="/js/header.js"></script>
+<script src="/js/footer.js"></script>
+
+</body>
+</html>

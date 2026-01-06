@@ -1,0 +1,265 @@
+/* -------------------------------------
+   RESET GENERAL & VARIABLES PARA SOBRE NOSOTROS
+-------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+:root {
+    --primary-dark: #02211a;
+    --primary-medium: #033b2d;
+    --primary-light: #055944;
+    --accent: #d4af37;
+    --accent-soft: #e6c862;
+    --text-light: #ffffff;
+    --text-muted: #e0e0e0;
+    --card-bg: rgba(2, 33, 26, 0.7);
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    background: var(--primary-dark);
+    color: var(--text-light);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* -------------------------------------
+   EFECTOS DE FONDO PARA SOBRE NOSOTROS
+-------------------------------------- */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(5, 89, 68, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* -------------------------------------
+   SCROLLBAR PERSONALIZADO
+-------------------------------------- */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #011611; }
+::-webkit-scrollbar-thumb { background: #888888; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #aaaaaa; }
+
+/* -------------------------------------
+   SECCIÓN SOBRE NOSOTROS
+-------------------------------------- */
+.sobrenosotros-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 70px auto 80px auto;
+    color: #ffffff;
+}
+
+.sobrenosotros-title {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 80px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Línea separadora */
+.linea-separadora {
+    width: 80%;
+    max-width: 800px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    margin: 60px auto;
+    opacity: 0.6;
+}
+
+/* -------------------------------------
+   BLOQUES PRINCIPALES
+-------------------------------------- */
+.sobrenosotros-bloque {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 60px;
+    flex-direction: row;
+}
+
+/* Texto */
+.sobrenosotros-bloque .texto {
+    flex: 1;
+    font-size: 1.2rem;
+    line-height: 2.0;
+    padding: 20px 0;
+}
+
+/* Imágenes — PREMIUM + DIFUMINADO EXTREMO + ENSANCHADO HORIZONTAL */
+.sobrenosotros-bloque .imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.sobrenosotros-bloque img {
+    width: 130%;            /* ENSANCHAR HACIA LOS COSTADOS */
+    max-width: 380px;
+    height: auto;
+    object-fit: cover;
+
+    /* DIFUMINADO EXTREMO: SIN BORDES VISIBLES */
+    -webkit-mask-image: radial-gradient(circle, black 30%, transparent 100%);
+    mask-image: radial-gradient(circle, black 30%, transparent 100%);
+
+    /* GLOW SUAVE PREMIUM */
+    filter: drop-shadow(0 0 40px rgba(212,175,55,0.20));
+
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.sobrenosotros-bloque img:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 55px rgba(212,175,55,0.30));
+}
+
+/* Alineación de texto */
+.sobrenosotros-bloque.izquierda .texto p { text-align: left; }
+.sobrenosotros-bloque.derecha   .texto p { text-align: right; }
+
+/* -------------------------------------
+   ANIMACIONES SCROLL
+-------------------------------------- */
+.sobrenosotros-bloque,
+.sobrenosotros-bloque-centrado {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.sobrenosotros-bloque.visible,
+.sobrenosotros-bloque-centrado.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Laterales */
+.sobrenosotros-bloque .texto,
+.sobrenosotros-bloque .imagen {
+    opacity: 0;
+    transition: all 0.9s ease;
+}
+
+.sobrenosotros-bloque.izquierda .texto { transform: translateX(-40px); }
+.sobrenosotros-bloque.izquierda .imagen { transform: translateX(40px); }
+
+.sobrenosotros-bloque.derecha .texto { transform: translateX(40px); }
+.sobrenosotros-bloque.derecha .imagen { transform: translateX(-40px); }
+
+.sobrenosotros-bloque.visible .texto,
+.sobrenosotros-bloque.visible .imagen {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* -------------------------------------
+   BLOQUE CENTRADO
+-------------------------------------- */
+.sobrenosotros-bloque-centrado {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.texto-centrado { margin: 30px 0; }
+
+.agradecimiento {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 40px;
+}
+
+.eslogan {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-top: 40px;
+}
+
+.imagen-centrada img {
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.imagen-centrada img:hover {
+    transform: scale(1.05);
+}
+
+/* -------------------------------------
+   FOOTER
+-------------------------------------- */
+footer {
+    margin-top: 40px;
+    background: #011611;
+    color: #b0bec5;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,transparent,var(--accent),transparent);
+}
+
+/* -------------------------------------
+   RESPONSIVE
+-------------------------------------- */
+@media (max-width: 900px) {
+
+    .sobrenosotros-bloque {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .sobrenosotros-bloque img {
+        width: 120%;   /* ENSANCHADO MÁS SUAVE EN MÓVIL */
+        max-width: 280px;
+
+        -webkit-mask-image: radial-gradient(circle, black 40%, transparent 100%);
+        mask-image: radial-gradient(circle, black 40%, transparent 100%);
+    }
+
+    .sobrenosotros-bloque .texto p {
+        text-align: center;
+    }
+
+    .sobrenosotros-bloque .texto,
+    .sobrenosotros-bloque .imagen {
+        transform: translateY(30px) !important;
+    }
+
+    .sobrenosotros-bloque.visible .texto,
+    .sobrenosotros-bloque.visible .imagen {
+        transform: translateY(0) !important;
+    }
+}

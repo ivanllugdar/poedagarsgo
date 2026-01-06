@@ -1,0 +1,193 @@
+/* -------------------------------------
+   RESET GENERAL
+-------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+:root {
+    --primary-dark: #02211a;
+    --accent: #d4af37;
+    --accent-soft: #e6c862;
+    --text-light: #ffffff;
+}
+
+/* Fondo premium */
+body {
+    background: var(--primary-dark);
+    color: var(--text-light);
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image:
+        radial-gradient(circle at 20% 30%, rgba(212,175,55,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(5,89,68,0.05) 0%, transparent 50%);
+    z-index: -1;
+}
+
+/* -------------------------------------
+   CONTENEDOR GENERAL
+-------------------------------------- */
+.faq-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 120px auto 80px auto;
+}
+
+/* -------------------------------------
+   TÍTULO PRINCIPAL
+-------------------------------------- */
+.faq-title {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 70px;
+}
+
+/* -------------------------------------
+   CATEGORÍAS — PREMIUM
+-------------------------------------- */
+.faq-category {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 60px 0 15px 0;
+    position: relative;
+    padding-left: 30px;
+}
+
+/* Icono dorado */
+.faq-category::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1rem;
+    color: var(--accent);
+    text-shadow: 0 0 8px rgba(212,175,55,0.6);
+}
+
+/* Línea separadora premium */
+.faq-category::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 1px;
+    margin: 14px auto 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.23), transparent);
+}
+
+/* -------------------------------------
+   BLOQUES DE PREGUNTAS
+-------------------------------------- */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.faq-item {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    backdrop-filter: blur(4px);
+    transition: 0.35s ease;
+    box-shadow: inset 0 0 8px rgba(255,255,255,0.05);
+}
+
+/* Pregunta */
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    text-align: left;
+    padding: 18px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    position: relative;
+    transition: 0.25s ease;
+}
+
+/* Glow premium al hover */
+.faq-question:hover {
+    color: var(--accent);
+    text-shadow: 0 0 8px rgba(212,175,55,0.5);
+}
+
+/* Flecha */
+.faq-question::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid var(--accent);
+    border-bottom: 2px solid var(--accent);
+    transform: translateY(-50%) rotate(45deg);
+    transition: 0.3s ease;
+}
+
+/* Rotación al abrir */
+.faq-item.active .faq-question::after {
+    transform: translateY(-50%) rotate(225deg);
+}
+
+/* Respuesta */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    opacity: 0;
+
+    transition:
+        max-height 0.45s ease,
+        padding 0.45s ease,
+        opacity 0.35s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 300px;
+    padding: 14px 20px 22px;
+    opacity: 1;
+}
+
+/* -------------------------------------
+   RESPONSIVE
+-------------------------------------- */
+@media (max-width: 900px) {
+
+    .faq-title {
+        font-size: 2.2rem;
+    }
+
+    .faq-category {
+        font-size: 1.3rem;
+        padding-left: 22px;
+    }
+
+    .faq-category::after {
+        width: 90%;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .faq-answer {
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Poedagar SGO</title>
+
+    <!-- Fuente Comfortaa -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS del Header -->
+    <link rel="stylesheet" href="/css/header.css">
+
+    <!-- CSS específico de Contacto -->
+    <link rel="stylesheet" href="/css/contacto.css">
+
+    <!-- CSS del Whatsapp -->
+    <link rel="stylesheet" href="/css/whatsapp.css">
+
+    <!-- CSS del Footer -->
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+
+<body>
+
+<!-- HEADER (dinámico) -->
+<div id="header-container"></div>
+
+<section class="contacto-container">
+    <h1 class="contacto-title">Contacto</h1>
+
+    <p class="contacto-descripcion">
+        ¿Tenés alguna consulta o necesitás asesoramiento?  
+        Completá el formulario y te responderemos a la brevedad.
+    </p>
+
+    <!-- FORMULARIO -->
+    <form id="form-contacto" 
+          action="https://formspree.io/f/mzzyjyvz" 
+          method="POST" 
+          class="contacto-form">
+        
+        <div class="form-grupo">
+            <label>Nombre completo</label>
+            <input type="text" name="nombre" required>
+        </div>
+
+        <div class="form-grupo">
+            <label>Correo electrónico</label>
+            <input type="email" name="email" required>
+        </div>
+
+        <div class="form-grupo">
+            <label>Mensaje</label>
+            <textarea name="mensaje" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+
+        <p id="estado-form" class="estado-form"></p>
+    </form>
+
+</section>
+
+<!-- FOOTER (dinámico) -->
+<div id="footer-container"></div>
+
+<!-- JS del Header (siempre primero) -->
+<script src="/js/header.js"></script>
+
+<!-- JS del Footer -->
+<script src="/js/footer.js"></script>
+
+<!-- JS del Contacto -->
+<script src="/js/contacto.js"></script>
+
+<!-- JS del Whatsapp -->
+<script src="/js/whatsapp.js"></script>
+
+</body>
+</html>

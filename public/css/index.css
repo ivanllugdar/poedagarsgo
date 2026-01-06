@@ -1,0 +1,257 @@
+/* -------------------------------------
+   RESET GENERAL & VARIABLES
+-------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comfortaa", sans-serif;
+}
+
+:root {
+    --primary-dark: #02211a;
+    --primary-medium: #033b2d;
+    --primary-light: #055944;
+    --accent: #d4af37;
+    --accent-soft: #e6c862;
+    --text-light: #ffffff;
+    --text-muted: #e0e0e0;
+    --card-bg: rgba(2, 33, 26, 0.7);
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    background: var(--primary-dark);
+    color: var(--text-light);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* -------------------------------------
+   EFECTOS GLOBALES
+-------------------------------------- */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(5, 89, 68, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* -------------------------------------
+   SCROLLBAR PERSONALIZADO
+-------------------------------------- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #011611;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaaaaa;
+}
+
+/* -------------------------------------
+   HERO SECTION
+-------------------------------------- */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 33, 26, 0.5);
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: var(--text-muted);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* -------------------------------------
+   BOTONES PRINCIPALES
+-------------------------------------- */
+.btn {
+    padding: 12px 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Botón Blanco con Efecto Especial */
+.hero-btn {
+    background: var(--white);
+    color: var(--primary-dark);
+    border: 2px solid var(--white);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(2, 33, 26, 0.1), 
+        transparent);
+    transition: left 0.6s ease;
+}
+
+.hero-btn:hover {
+    background: transparent;
+    color: var(--white);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.hero-btn:hover::before {
+    left: 100%;
+}
+
+/* Botón Secundario del Hero */
+.btn-secundario {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.btn-secundario::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.1), 
+        transparent);
+    transition: left 0.6s ease;
+}
+
+.btn-secundario:hover {
+    background: var(--white);
+    color: var(--primary-dark);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.btn-secundario:hover::before {
+    left: 100%;
+}
+
+/* -------------------------------------
+   FOOTER
+-------------------------------------- */
+footer {
+    margin-top: 40px;
+    background: #011611;
+    color: #b0bec5;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+/* -------------------------------------
+   RESPONSIVE DESIGN
+-------------------------------------- */
+@media (max-width: 900px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
