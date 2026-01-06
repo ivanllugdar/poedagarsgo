@@ -72,7 +72,7 @@ body {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     min-height: 520px;
-    background-image: url("/assets/img/hero-tienda.png");
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/poedagarsgo-31c17.firebasestorage.app/o/assets%2Fimg%2Fhero-tienda.png?alt=media&token=11bdd2c6-ffd1-4b3b-a34c-bef4f28b9f4c");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
